@@ -65,11 +65,47 @@ nav a:hover {
     left: 0;
     color: #07071c7a;
 }
+
 footer {
     font-size: 10px;
     position: fixed;
     bottom: 0;
     top: 910px;
+}
+
+.Gameslist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.eentweede {
+    flex: 1 0 21%;
+    display: inline-block;
+    margin: 20px 0px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.eentweede:hover {
+    background-color: #191822;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+.container:hover {
+    color: #858585a8;
+}
+
+.noline {
+    text-decoration: none;
 }
 
 /* scrollbar */
@@ -106,5 +142,16 @@ footer {
 
     .topnav a.icon {
         display: none;
+    }
+
+    .eentweede {
+        margin: 20px 10px;
+        width: 300px;
+    }
+
+    img {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
     }
 }

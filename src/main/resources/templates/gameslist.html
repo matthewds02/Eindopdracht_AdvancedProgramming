@@ -18,22 +18,23 @@
             </a>
         </nav>
     </div>
-    <h1>About</h1>
+    <h1>Games</h1>
 </header>
-<div class="flex-container">
-    <main>
-        <div class="Gameslist">
-            <div th:each="game: ${games}">
-                <a class="buttonLook mediumButton">
+<main>
+    <div class="Gameslist">
+        <div class="eentweede" th:each="game: ${games}">
+            <a class="noline" th:href="@{|/gamesdetails/${game.id}}">
+                <div class="container">
+                    <img src="img/WDL.jpg" alt="foto van Watch Dogs Legion">
                     <span th:text="${game.gameName}">game name</span>
                     <div>
                         <span class="generalinfo" th:text="|Cracked: ${game.cracked}|">Cracked: False</span>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
-    </main>
-</div>
+    </div>
+</main>
 <script>
     function navToggle() {
         var x = document.getElementById("myLinks");
