@@ -23,7 +23,7 @@ body {
     padding-right: 24px;
 }
 main {
-    max-height: 732px;
+    max-height: 80%;
     overflow-y: scroll;
 }
 
@@ -70,7 +70,7 @@ footer {
     font-size: 10px;
     position: fixed;
     bottom: 0;
-    top: 910px;
+    height: 20px;
 }
 
 .Gameslist {
@@ -80,7 +80,7 @@ footer {
 }
 
 .eentweede {
-    flex: 1 0 21%;
+    flex: 50%;
     display: inline-block;
     margin: 20px 0px;
     vertical-align: top;
@@ -145,6 +145,7 @@ img {
     }
 
     .eentweede {
+        flex: 1 0 21%;
         margin: 20px 10px;
         width: 300px;
     }

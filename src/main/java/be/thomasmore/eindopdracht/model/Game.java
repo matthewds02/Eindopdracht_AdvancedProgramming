@@ -3,6 +3,7 @@ package be.thomasmore.eindopdracht.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import java.awt.*;
 import java.util.Date;
 
 @Entity
