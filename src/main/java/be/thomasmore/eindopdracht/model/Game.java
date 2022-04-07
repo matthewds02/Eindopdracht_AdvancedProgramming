@@ -2,16 +2,19 @@ package be.thomasmore.eindopdracht.model;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 public class Game {
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "game_generator")
+    @SequenceGenerator(name = "game_generator", sequenceName = "game_seq", allocationSize = 1)
     @Id
     private Integer id;
     private String gameName;
+    /* why DateTimeFormat = https://stackoverflow.com/questions/46414394/map-html-input-date-to-localdate-of-java-object
+    https://myshittycode.com/2017/06/22/spring-mvc-failed-to-convert-value-of-type-java-lang-string-to-required-type-java-time-localdatetime/
+     */
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate gameReleaseDate;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
