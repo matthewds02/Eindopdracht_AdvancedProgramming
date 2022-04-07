@@ -108,6 +108,37 @@ img {
     text-decoration: none;
 }
 
+.buttonLook {
+    background-color: #5c5c5c;
+    color: #f2f2f2;
+    padding: 3px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.buttonLook:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.prevButtonDiv {
+    width: fit-content;
+    margin-left: 50px;
+    float: left;
+}
+
+.nextButtonDiv {
+    width: fit-content;
+    margin-right: 50px;
+    float: right;
+}
+
+.row1content {
+    padding-top: 50px;
+    text-align: center;
+    color: white;
+}
+
 /* scrollbar */
 /* width */
 ::-webkit-scrollbar {

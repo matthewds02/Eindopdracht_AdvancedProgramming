@@ -8,6 +8,7 @@ import java.util.Optional;
 public interface GameRepository extends CrudRepository<Game, Integer> {
     Optional<Game> findFirstByIdLessThanOrderByIdDesc(int id);
     Optional<Game> findFirstByIdGreaterThanOrderById(int id);
-    Optional<Game> findFirstByOrderByIdDesc();
     Optional<Game> findFirstByOrderByIdAsc();
+    Optional<Game> findFirstByOrderByIdDesc();
+    Optional<Game> findById(int id);
 }
