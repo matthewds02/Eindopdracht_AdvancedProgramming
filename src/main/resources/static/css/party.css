@@ -133,6 +133,12 @@ img {
     float: right;
 }
 
+.editButtonDiv {
+    width: fit-content;
+    margin-right: 30px;
+    float: right;
+}
+
 .row1content {
     padding-top: 50px;
     text-align: center;
