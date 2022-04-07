@@ -1,13 +1,8 @@
 package be.thomasmore.eindopdracht.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import java.awt.*;
+import javax.persistence.*;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 public class Game {
@@ -26,10 +21,9 @@ public class Game {
     private boolean playstation5;
     private boolean xbox;
     private boolean pc;
-    private String image;
-
-    public Game() {
-    }
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "IMAGE_ID")
+    private Images images;
 
     public Integer getId() {
         return id;
@@ -127,11 +121,11 @@ public class Game {
         this.pc = pc;
     }
 
-    public String getImage() {
-        return image;
+    public Images getImages() {
+        return images;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImages(Images images) {
+        this.images = images;
     }
 }
