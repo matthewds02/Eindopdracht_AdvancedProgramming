@@ -1,18 +1,21 @@
 package be.thomasmore.eindopdracht.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import java.awt.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 public class Game {
     @Id
     private Integer id;
     private String gameName;
-    private Date gameReleaseDate;
-    private Date crackedDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate gameReleaseDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate crackedDate;
     // why lob = https://stackoverflow.com/questions/24214341/why-is-this-value-too-long-for-my-h2-table
     @Lob
     private String extraInfo;
@@ -43,20 +46,20 @@ public class Game {
         this.gameName = gameName;
     }
 
-    public Date getGameReleaseDate() {
+    public LocalDate getGameReleaseDate() {
         return gameReleaseDate;
     }
 
-    public void setGameReleaseDate(Date gameReleaseDate) {
+    public void setGameReleaseDate(LocalDate gameReleaseDate) {
         this.gameReleaseDate = gameReleaseDate;
     }
 
 
-    public Date getCrackedDate() {
+    public LocalDate getCrackedDate() {
         return crackedDate;
     }
 
-    public void setCrackedDate(Date crackedDate) {
+    public void setCrackedDate(LocalDate crackedDate) {
         this.crackedDate = crackedDate;
     }
 

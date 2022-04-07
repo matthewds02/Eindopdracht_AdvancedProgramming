@@ -21,34 +21,61 @@
 </header>
 <main>
     <div class="row1content" th:if="${game}">
-        <div class="editButtonDiv">
-            <a class="buttonLook smallButton" th:href="@{'/gamesdetails/'}">back</a>
-        </div>
-        <div>
+        <form th:action="@{|/admin/gamesedit/${game.id}|}" th:object="${game}" method="post">
+            <div class="editButtonDiv">
+                <a class="buttonLook smallButton" th:href="@{'/gamesdetails/' + ${game.id}}">back</a>
+            </div>
+            <div class="saveButtonDiv">
+                <input type="submit" value="Save" class="buttonLook smallButton">
+            </div>
             <h2 th:text="${game.getGameName()}">Naam game</h2>
-        </div>
-        <div>
-            <div class="info">Info : </div>
-            <div><p th:text="${game.getExtraInfo()}">informatie game</p></div><br>
-            <div class="info">Release Date : </div>
-            <div><p th:text="${game.getGameReleaseDate()}">0</p></div><br>
-            <div class="info">Cracked Date : </div>
-            <div><p th:text="${game.getCrackedDate()}">no</p></div><br>
-            <div class="info">Publisher : </div>
-            <div><p th:text="${game.getPublisher()}">no</p></div><br>
-            <div class="info">Cracked by : </div>
-            <div><p th:text="${game.getCrackedBy()}">no</p></div><br>
-            <div class="info">Cracked ? : </div>
-            <div><p th:text="${game.isCracked() ? 'yes' : 'no'}">no</p></div><br>
-            <div class="info">Playable on ps4 ? : </div>
-            <div><p th:text="${game.isPlaystation4() ? 'yes' : 'no'}">no</p></div><br>
-            <div class="info">Playable on ps5 ? : </div>
-            <div><p th:text="${game.isPlaystation5() ? 'yes' : 'no'}">no</p></div><br>
-            <div class="info">Playable on pc ? : </div>
-            <div><p th:text="${game.isPc() ? 'yes' : 'no'}">no</p></div><br>
-            <div class="info">Playable on xbox ? : </div>
-            <div><p th:text="${game.isXbox() ? 'yes' : 'no'}">no</p></div><br>
-        </div>
+            <div>
+                <label for="gameName">Name : </label>
+                <input type="text" id="gameName" th:field="*{gameName}">
+            </div>
+            <div>
+                <label for="gameExtraInfo">Info : </label>
+                <textarea id="gameExtraInfo" rows="5" cols="50" th:field="*{extraInfo}"></textarea>
+            </div>
+            <div>
+                <label for="gameReleaseDate">Release Date : </label>
+                <input type="date" id="gameReleaseDate" th:field="*{gameReleaseDate}">
+            </div>
+            <div>
+                <label for="gameCrackedDate">Cracked Date : </label>
+                <input type="date" id="gameCrackedDate" th:field="*{crackedDate}">
+            </div>
+            <div>
+                <label for="gamePublisher">Publisher : </label>
+                <input type="text" id="gamePublisher" th:field="*{publisher}">
+            </div>
+            <div>
+                <label for="gameCrackedBy">Cracked by : </label>
+                <input type="text" id="gameCrackedBy" th:field="*{crackedBy}">
+            </div>
+            <div>
+                <div class="info">Info : </div>
+                <div><p th:text="${game.getExtraInfo()}">informatie game</p></div><br>
+                <div class="info">Release Date : </div>
+                <div><p th:text="${game.getGameReleaseDate()}">0</p></div><br>
+                <div class="info">Cracked Date : </div>
+                <div><p th:text="${game.getCrackedDate()}">no</p></div><br>
+                <div class="info">Publisher : </div>
+                <div><p th:text="${game.getPublisher()}">no</p></div><br>
+                <div class="info">Cracked by : </div>
+                <div><p th:text="${game.getCrackedBy()}">no</p></div><br>
+                <div class="info">Cracked ? : </div>
+                <div><p th:text="${game.isCracked() ? 'yes' : 'no'}">no</p></div><br>
+                <div class="info">Playable on ps4 ? : </div>
+                <div><p th:text="${game.isPlaystation4() ? 'yes' : 'no'}">no</p></div><br>
+                <div class="info">Playable on ps5 ? : </div>
+                <div><p th:text="${game.isPlaystation5() ? 'yes' : 'no'}">no</p></div><br>
+                <div class="info">Playable on pc ? : </div>
+                <div><p th:text="${game.isPc() ? 'yes' : 'no'}">no</p></div><br>
+                <div class="info">Playable on xbox ? : </div>
+                <div><p th:text="${game.isXbox() ? 'yes' : 'no'}">no</p></div><br>
+            </div>
+        </form>
     </div>  <div class="row1content" th:unless="${game}">
     <p>no game was chosen</p>
 </div>

@@ -139,6 +139,18 @@ img {
     float: right;
 }
 
+.saveButtonDiv {
+    width: fit-content;
+    margin-right: 30px;
+    float: right;
+    line-height: normal;
+    font-family: none;
+}
+
+.smallButton {
+    border:none;
+}
+
 .row1content {
     padding-top: 50px;
     text-align: center;
