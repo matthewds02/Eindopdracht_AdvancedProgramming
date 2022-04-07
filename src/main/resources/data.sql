@@ -166,3 +166,27 @@ values (
            17, 'Assassin''s Creed Valhalla', '2020-10-10', '2021-03-24',
            'Assassin''s Creed Valhalla is an action role-playing video game developed by Ubisoft Montreal and published by Ubisoft.',
            'Ubisoft', 'Empress', true, true, true, true, true);
+
+INSERT INTO user(
+    ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('USER_SEQ'), 'admin', '$2a$10$quITr64cP5eENwFJsorppukD5z18iq13GQ97Ke9v58E69UftZ3vt2', 'ROLE_ADMIN');
+
+INSERT INTO user(
+    ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('USER_SEQ'), 'daria', '$2a$10$XyWeDv22PpxAplDmI0pqUu7Qo1NdlrXracPeo.HbtA61UvLGTaYk6', 'ROLE_USER');
+
+INSERT INTO user(
+    ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('USER_SEQ'), 'giraf', '$2a$10$XyWeDv22PpxAplDmI0pqUu7Qo1NdlrXracPeo.HbtA61UvLGTaYk6', 'ROLE_USER');
+
+INSERT INTO user(
+    ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('USER_SEQ'), 'olifant', '$2a$10$XyWeDv22PpxAplDmI0pqUu7Qo1NdlrXracPeo.HbtA61UvLGTaYk6', 'ROLE_USER');
+
+INSERT INTO user(
+    ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('USER_SEQ'), 'dromedaris', '$2a$10$XyWeDv22PpxAplDmI0pqUu7Qo1NdlrXracPeo.HbtA61UvLGTaYk6', 'ROLE_USER');
+
+INSERT INTO user(
+    ID, USERNAME, PASSWORD, ROLE)
+VALUES (nextval('USER_SEQ'), 'draak', '$2a$10$XyWeDv22PpxAplDmI0pqUu7Qo1NdlrXracPeo.HbtA61UvLGTaYk6', 'ROLE_USER');

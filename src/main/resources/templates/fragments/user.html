@@ -1,0 +1,2 @@
+<a th:if="${principal}" th:fragment="loginmenu" href="/logout">logout</a>
+<a th:unless="${principal}" th:fragment="loginmenu" href="/login">login</a>
