@@ -29,6 +29,7 @@ public class Game {
     private boolean playstation5;
     private boolean xbox;
     private boolean pc;
+    private String image;
 
     public Game() {
     }
@@ -128,5 +129,13 @@ public class Game {
 
     public void setPc(boolean pc) {
         this.pc = pc;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
