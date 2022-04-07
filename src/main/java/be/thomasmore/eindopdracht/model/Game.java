@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import java.awt.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -11,8 +14,8 @@ public class Game {
     @Id
     private Integer id;
     private String gameName;
-    private Date gameReleaseDate;
-    private Date crackedDate;
+    private LocalDate gameReleaseDate;
+    private LocalDate crackedDate;
     // why lob = https://stackoverflow.com/questions/24214341/why-is-this-value-too-long-for-my-h2-table
     @Lob
     private String extraInfo;
@@ -23,6 +26,7 @@ public class Game {
     private boolean playstation5;
     private boolean xbox;
     private boolean pc;
+    private String image;
 
     public Game() {
     }
@@ -43,20 +47,19 @@ public class Game {
         this.gameName = gameName;
     }
 
-    public Date getGameReleaseDate() {
+    public LocalDate getGameReleaseDate() {
         return gameReleaseDate;
     }
 
-    public void setGameReleaseDate(Date gameReleaseDate) {
+    public void setGameReleaseDate(LocalDate gameReleaseDate) {
         this.gameReleaseDate = gameReleaseDate;
     }
 
-
-    public Date getCrackedDate() {
+    public LocalDate getCrackedDate() throws ParseException {
         return crackedDate;
     }
 
-    public void setCrackedDate(Date crackedDate) {
+    public void setCrackedDate(LocalDate crackedDate) {
         this.crackedDate = crackedDate;
     }
 
@@ -122,5 +125,13 @@ public class Game {
 
     public void setPc(boolean pc) {
         this.pc = pc;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
