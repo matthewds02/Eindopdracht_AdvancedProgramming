@@ -1,8 +1,7 @@
 package be.thomasmore.eindopdracht.model;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDate;
 
 @Entity
@@ -29,10 +28,9 @@ public class Game {
     private boolean playstation5;
     private boolean xbox;
     private boolean pc;
-    private String image;
-
-    public Game() {
-    }
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "IMAGE_ID")
+    private Images images;
 
     public Integer getId() {
         return id;
@@ -131,11 +129,11 @@ public class Game {
         this.pc = pc;
     }
 
-    public String getImage() {
-        return image;
+    public Images getImages() {
+        return images;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImages(Images images) {
+        this.images = images;
     }
 }
