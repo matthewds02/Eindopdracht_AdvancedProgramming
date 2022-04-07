@@ -1,3 +1,4 @@
+/*
 package be.thomasmore.eindopdracht.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,3 +54,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 }
+*/
