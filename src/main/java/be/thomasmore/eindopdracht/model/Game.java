@@ -4,6 +4,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import javax.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
+import java.time.LocalDate;
 
 @Entity
 public class Game {
@@ -29,9 +32,9 @@ public class Game {
     private boolean playstation5;
     private boolean xbox;
     private boolean pc;
-
-    public Game() {
-    }
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "IMAGE_ID")
+    private Images images;
 
     public Integer getId() {
         return id;
@@ -128,5 +131,13 @@ public class Game {
 
     public void setPc(boolean pc) {
         this.pc = pc;
+    }
+
+    public Images getImages() {
+        return images;
+    }
+
+    public void setImages(Images images) {
+        this.images = images;
     }
 }
