@@ -14,3 +14,5 @@ try_merge is merge of my edit (Edit_pages) and papa's edit (test_papa)
 gamesNewPage is where you can create a new game
 
 addGames is where I add more games in database
+
+looks is for the interface, needs to look cleaner

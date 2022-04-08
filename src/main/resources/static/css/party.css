@@ -172,7 +172,7 @@ h1.gameslist {
 .newButtonDiv {
     float: right;
     padding-right: 76px;
-    padding-top: 37px;
+    margin-top: -53px;
 }
 
 .clearFloats {
