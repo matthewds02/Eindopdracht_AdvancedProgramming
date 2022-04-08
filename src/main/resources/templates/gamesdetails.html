@@ -19,7 +19,7 @@
         </nav>
     </div>
 </header>
-<main>
+<main  class="clearFloats">
     <div class="row1content" th:if="${game}">
         <div th:if="${prev!=null}" class="prevButtonDiv">
             <a class="buttonLook smallButton" th:href="@{'/gamesdetails/' + ${prev}}">&lt;</a>

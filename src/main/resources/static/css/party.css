@@ -155,6 +155,28 @@ img {
     padding-top: 50px;
     text-align: center;
     color: white;
+    clear: both;
+}
+
+.clearfix {
+    float: left;
+}
+h1.gameslist {
+    display: inline-block;
+}
+
+.site-header {
+    text-align: center;
+}
+
+.newButtonDiv {
+    float: right;
+    padding-right: 76px;
+    padding-top: 37px;
+}
+
+.clearFloats {
+    clear: both;
 }
 
 /* scrollbar */

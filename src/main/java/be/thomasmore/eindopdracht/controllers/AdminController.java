@@ -115,8 +115,15 @@ public class AdminController {
     @GetMapping("/gamesnew")
     public String gamesNew(Model model) {
         logger.info("gamesnew");
-        model.addAttribute("game", gameRepository.findAllGames());
 
         return "admin/gamesnew";
+    }
+
+    @PostMapping("/gamesnew")
+    public String gamesNewPost(Model model, @ModelAttribute("game") Game game) {
+        logger.info("gamesNewPost -- new name=" + game.getGameName() + " -- new info: " + game.getExtraInfo());
+        gameRepository.save(game);
+
+        return "redirect:/gamesdetails/"+game.getId();
     }
 }
