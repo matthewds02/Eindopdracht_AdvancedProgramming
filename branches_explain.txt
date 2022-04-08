@@ -1,0 +1,12 @@
+Version1
+
+Version2
+
+Picture_database is backup for hardcoded images
+
+Edit_pages was my edit, the edit form is done and some looks are different
+
+test_papa is papa's edit, here are the pictures put in a table in 
+the database and read out the database into the html
+
+try_merge is merge of my edit (Edit_pages) and papa's edit (test_papa)
