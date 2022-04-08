@@ -1,7 +1,8 @@
 package be.thomasmore.eindopdracht.model;
 
-import javax.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
