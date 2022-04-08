@@ -10,3 +10,7 @@ test_papa is papa's edit, here are the pictures put in a table in
 the database and read out the database into the html
 
 try_merge is merge of my edit (Edit_pages) and papa's edit (test_papa)
+
+gamesNewPage is where you can create a new game
+
+addGames is where I add more games in database
