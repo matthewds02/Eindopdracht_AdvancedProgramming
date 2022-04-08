@@ -4,9 +4,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import javax.persistence.*;
-import org.springframework.format.annotation.DateTimeFormat;
-import java.time.LocalDate;
 
 @Entity
 public class Game {
