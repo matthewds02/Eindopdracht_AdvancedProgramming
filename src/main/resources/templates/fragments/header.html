@@ -1,5 +1,7 @@
 <nav th:fragment="navbar">
-    <a th:href="@{/home}">Homepage</a>
-    <a th:href="@{/gameslist}">gameslist</a>
-    <a th:replace="fragments/user :: loginmenu">Hier komt het login user deel</a>
+    <ul>
+        <li><a th:href="@{/home}">Homepage</a></li>
+        <li><a th:href="@{/gameslist}">gameslist</a></li>
+        <li><a th:replace="fragments/user :: loginmenu">Hier komt het login user deel</a></li>
+    </ul>
 </nav>

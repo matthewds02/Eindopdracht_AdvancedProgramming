@@ -47,11 +47,19 @@ p{
 }
 
 nav a{
-    background-color: #5c5c5c;
-    color: #f2f2f2;
-    padding: 3px 16px;
+    color: #fff;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 25px;
+    margin: 0 5px;
+    text-align: left;
     text-decoration: none;
-    font-size: 17px;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 25px;
+    transition: all .3s ease-in-out;
 }
 
 nav a:hover {
@@ -64,6 +72,14 @@ nav a:hover {
     position: absolute;
     left: 0;
     color: #07071c7a;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    display: inline-block;
 }
 
 footer {
@@ -158,9 +174,6 @@ img {
     clear: both;
 }
 
-.clearfix {
-    float: left;
-}
 h1.gameslist {
     display: inline-block;
 }
