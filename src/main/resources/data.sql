@@ -1,6 +1,6 @@
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'test', '/img/WDL.jpg');
+VALUES (nextval('USER_SEQ'), 'WDL', '/img/WDL.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
@@ -64,7 +64,7 @@ values (
            'Watch Dogs: Legion is an action-adventure game played from a third-person perspective, and taking place
             within an open world setting based upon London, which can be explored either on foot ─ utilizing parkour
             moves ─ vehicles, or fast-travelling via the city''s Underground stations.',
-           'Ubisoft', 'EMPRESS', true, true, true, true, true,(SELECT i.IMAGE_ID FROM IMAGES i where i.IMAGE_NAME = 'test'));
+           'Ubisoft', 'EMPRESS', true, true, true, true, true,(SELECT i.IMAGE_ID FROM IMAGES i where i.IMAGE_NAME = 'WDL'));
 
 insert into GAME (
     ID, GAME_NAME, GAME_RELEASE_DATE, CRACKED_DATE, EXTRA_INFO,

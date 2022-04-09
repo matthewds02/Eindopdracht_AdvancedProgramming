@@ -1,5 +1,6 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,6 +27,7 @@
 <main>
     <div class="container-content" th:object="${game}">
         <form th:action="@{|/admin/gamesnew/|}" method="post">
+            <div class="error" th:if="${#fields.hasErrors('*')}">ERROR - data is not saved</div>
             <div class="editButtonDiv">
                 <a class="buttonLook smallButton" th:href="@{'/gameslist/'}">back</a>
             </div>
@@ -34,7 +36,7 @@
             </div>
             <dl class="row-text">
                 <dt class="col-sm-5"><label for="gameName">Name : </label></dt>
-                <dd class="col-sm-7"><input type="text" id="gameName" th:field="*{gameName}"></dd>
+                <dd class="col-sm-7"><input type="text" id="gameName" th:field="*{gameName}" th:errorclass="fieldError"></dd>
                 <dt class="col-sm-5"><label for="gameExtraInfo">Info : </label></dt>
                 <dd class="col-sm-7"><textarea id="gameExtraInfo" rows="5" cols="50" th:field="*{extraInfo}"></textarea></dd>
                 <dt class="col-sm-5"><label for="gameReleaseDate">Release Date : </label></dt>
@@ -42,7 +44,7 @@
                 <dt class="col-sm-5"><label for="gameCrackedDate">Cracked Date : </label></dt>
                 <dd class="col-sm-7"><input type="date" id="gameCrackedDate" th:field="*{crackedDate}"></dd>
                 <dt class="col-sm-5"><label for="gamePublisher">Publisher : </label></dt>
-                <dd class="col-sm-7"><input type="text" id="gamePublisher" th:field="*{publisher}"></dd>
+                <dd class="col-sm-7"><input type="text" id="gamePublisher" th:field="*{publisher}" th:errorclass="fieldError"></dd>
                 <dt class="col-sm-5"><label for="gameCrackedBy">Cracked by : </label></dt>
                 <dd class="col-sm-7"><input type="text" id="gameCrackedBy" th:field="*{crackedBy}"></dd>
                 <dt class="col-sm-5"><label for="gameIsCrackedYes">Cracked ? :</label></dt>

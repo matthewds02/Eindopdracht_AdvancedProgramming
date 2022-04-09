@@ -3,6 +3,8 @@ package be.thomasmore.eindopdracht.model;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
@@ -11,6 +13,7 @@ public class Game {
     @SequenceGenerator(name = "game_generator", sequenceName = "game_seq", allocationSize = 1)
     @Id
     private Integer id;
+    @NotBlank
     private String gameName;
     /* why DateTimeFormat = https://stackoverflow.com/questions/46414394/map-html-input-date-to-localdate-of-java-object
     https://myshittycode.com/2017/06/22/spring-mvc-failed-to-convert-value-of-type-java-lang-string-to-required-type-java-time-localdatetime/
@@ -22,6 +25,7 @@ public class Game {
     // why lob = https://stackoverflow.com/questions/24214341/why-is-this-value-too-long-for-my-h2-table
     @Lob
     private String extraInfo;
+    @NotBlank
     private String publisher;
     private String crackedBy;
     private boolean cracked;

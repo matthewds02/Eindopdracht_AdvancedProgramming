@@ -8,7 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.util.Optional;
 
 @Controller
@@ -109,6 +112,7 @@ public class AdminController {
             Optional<Game> optionalGame = gameRepository.findById(id);
             if (optionalGame.isPresent()) return optionalGame.get();
         }
+        model.addAttribute("images", imageRepository.findAllImages());
 
         return new Game();
     }
@@ -116,14 +120,16 @@ public class AdminController {
     @GetMapping("/gamesnew")
     public String gamesNew(Model model) {
         logger.info("gamesnew");
-        model.addAttribute("images", imageRepository.findAllImages());
 
         return "admin/gamesnew";
     }
 
     @PostMapping("/gamesnew")
-    public String gamesNewPost(Model model, @ModelAttribute("game") Game game) {
+    public String gamesNewPost(Model model, @Valid @ModelAttribute("game") Game game, BindingResult bindingResult) {
         logger.info("gamesNewPost -- new name=" + game.getGameName() + " -- new info: " + game.getExtraInfo());
+        if (bindingResult.hasErrors()) {
+            return "admin/gamesnew";
+        }
         gameRepository.save(game);
         return "redirect:/gamesdetails/"+game.getId();
     }

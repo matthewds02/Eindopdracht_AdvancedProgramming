@@ -219,6 +219,14 @@ h1.gameslist {
     padding-right: 20px;
 }
 
+.error {
+    clear: both;
+}
+
+.fieldError {
+    background: red;
+}
+
 /* scrollbar */
 /* width */
 ::-webkit-scrollbar {

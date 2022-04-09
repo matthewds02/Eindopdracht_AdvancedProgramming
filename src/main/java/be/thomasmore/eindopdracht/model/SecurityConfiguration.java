@@ -1,4 +1,4 @@
-/*package be.thomasmore.eindopdracht.model;
+package be.thomasmore.eindopdracht.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -16,14 +16,9 @@ import javax.sql.DataSource;
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/admin/**").authenticated()
-                .anyRequest().permitAll()
-                .and().formLogin();
-        http.formLogin()
-                .loginPage("/user/login");
-        http.logout()
-                .logoutUrl("/user/logout")
-                .logoutSuccessUrl("/");
+                .antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
+                .anyRequest().permitAll();
+        http.formLogin();
         http.csrf().ignoringAntMatchers("/h2-console/**")
                 .and().headers().frameOptions().sameOrigin();
     }
@@ -52,4 +47,4 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             throws Exception {
         return super.authenticationManagerBean();
     }
-}*/
+}
