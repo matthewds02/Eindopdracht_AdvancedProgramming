@@ -12,7 +12,7 @@ import java.security.Principal;
 public class HomeController {
     private Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-    @GetMapping({"/", "/home"})
+    @GetMapping({"/", "/home", "/{something}"})
     public String home(Model model, Principal principal) {
         final String loginName = principal==null ? "NOBODY" : principal.getName();
         logger.info("homepage - logged in as " + loginName);

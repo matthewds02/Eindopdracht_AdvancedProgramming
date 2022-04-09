@@ -19,8 +19,11 @@
             </a>
         </nav>
     </div>
+    <div class="clearFloats">
+        <h2>New Game</h2>
+    </div>
 </header>
-<main class="clearFloats">
+<main>
     <div class="container-content" th:object="${game}">
         <form th:action="@{|/admin/gamesnew/|}" method="post">
             <div class="editButtonDiv">
@@ -29,66 +32,45 @@
             <div class="saveButtonDiv">
                 <input type="submit" value="Create" class="buttonLook smallButton">
             </div>
-            <h2>New Game</h2>
-            <div>
-                <label for="gameName">Name : </label>
-                <input type="text" id="gameName" th:field="*{gameName}">
-            </div>
-            <div>
-                <label for="gameExtraInfo">Info : </label>
-                <textarea id="gameExtraInfo" rows="5" cols="50" th:field="*{extraInfo}"></textarea>
-            </div>
-            <div>
-                <label for="gameReleaseDate">Release Date : </label>
-                <input type="date" id="gameReleaseDate" th:field="*{gameReleaseDate}">
-            </div>
-            <div>
-                <label for="gameCrackedDate">Cracked Date : </label>
-                <input type="date" id="gameCrackedDate" th:field="*{crackedDate}">
-            </div>
-            <div>
-                <label for="gamePublisher">Publisher : </label>
-                <input type="text" id="gamePublisher" th:field="*{publisher}">
-            </div>
-            <div>
-                <label for="gameCrackedBy">Cracked by : </label>
-                <input type="text" id="gameCrackedBy" th:field="*{crackedBy}">
-            </div>
-            <div>
-                <label for="gameIsCrackedYes">Cracked ? :</label>
-                <label for="gameIsCrackedYes" class="filtername">yes</label>
-                <input type="radio" id="gameIsCrackedYes"value="true" th:field="*{cracked}">
-                <label for="gameIsCrackedNo" class="filtername">no</label>
-                <input type="radio" id="gameIsCrackedNo" value="false" th:field="*{cracked}">
-            </div>
-            <div>
-                <label for="gameIsOnPlaystation4Yes">On playstation4 ? :</label>
-                <label for="gameIsOnPlaystation4Yes" class="filtername">yes</label>
-                <input type="radio" id="gameIsOnPlaystation4Yes"value="true" th:field="*{playstation4}">
-                <label for="gameIsOnPlaystation4No" class="filtername">no</label>
-                <input type="radio" id="gameIsOnPlaystation4No" value="false" th:field="*{playstation4}">
-            </div>
-            <div>
-                <label for="gameIsOnPlaystation5Yes">On playstation5 ? :</label>
-                <label for="gameIsOnPlaystation5Yes" class="filtername">yes</label>
-                <input type="radio" id="gameIsOnPlaystation5Yes"value="true" th:field="*{playstation5}">
-                <label for="gameIsOnPlaystation5No" class="filtername">no</label>
-                <input type="radio" id="gameIsOnPlaystation5No" value="false" th:field="*{playstation5}">
-            </div>
-            <div>
-                <label for="gameIsOnPcyes">On pc ? :</label>
-                <label for="gameIsOnPcyes" class="filtername">yes</label>
-                <input type="radio" id="gameIsOnPcyes"value="true" th:field="*{pc}">
-                <label for="gameIsOnPcNo" class="filtername">no</label>
-                <input type="radio" id="gameIsOnPcNo" value="false" th:field="*{pc}">
-            </div>
-            <div>
-                <label for="gameIsOnXboxyes">On xbox ? :</label>
-                <label for="gameIsOnXboxyes" class="filtername">yes</label>
-                <input type="radio" id="gameIsOnXboxyes"value="true" th:field="*{xbox}">
-                <label for="gameIsOnXboxNo" class="filtername">no</label>
-                <input type="radio" id="gameIsOnXboxNo" value="false" th:field="*{xbox}">
-            </div>
+            <dl class="row-text">
+                <dt class="col-sm-5"><label for="gameName">Name : </label></dt>
+                <dd class="col-sm-7"><input type="text" id="gameName" th:field="*{gameName}"></dd>
+                <dt class="col-sm-5"><label for="gameExtraInfo">Info : </label></dt>
+                <dd class="col-sm-7"><textarea id="gameExtraInfo" rows="5" cols="50" th:field="*{extraInfo}"></textarea></dd>
+                <dt class="col-sm-5"><label for="gameReleaseDate">Release Date : </label></dt>
+                <dd class="col-sm-7"><input type="date" id="gameReleaseDate" th:field="*{gameReleaseDate}"></dd>
+                <dt class="col-sm-5"><label for="gameCrackedDate">Cracked Date : </label></dt>
+                <dd class="col-sm-7"><input type="date" id="gameCrackedDate" th:field="*{crackedDate}"></dd>
+                <dt class="col-sm-5"><label for="gamePublisher">Publisher : </label></dt>
+                <dd class="col-sm-7"><input type="text" id="gamePublisher" th:field="*{publisher}"></dd>
+                <dt class="col-sm-5"><label for="gameCrackedBy">Cracked by : </label></dt>
+                <dd class="col-sm-7"><input type="text" id="gameCrackedBy" th:field="*{crackedBy}"></dd>
+                <dt class="col-sm-5"><label for="gameIsCrackedYes">Cracked ? :</label></dt>
+                <dd class="col-sm-7"><label for="gameIsCrackedYes" class="filtername">yes</label>
+                    <input type="radio" id="gameIsCrackedYes"value="true" th:field="*{cracked}">
+                    <label for="gameIsCrackedNo" class="filtername">no</label>
+                    <input type="radio" id="gameIsCrackedNo" value="false" th:field="*{cracked}"></dd>
+                <dt class="col-sm-5"><label for="gameIsOnPlaystation4Yes">On playstation4 ? :</label></dt>
+                <dd class="col-sm-7"><label for="gameIsOnPlaystation4Yes" class="filtername">yes</label>
+                    <input type="radio" id="gameIsOnPlaystation4Yes"value="true" th:field="*{playstation4}">
+                    <label for="gameIsOnPlaystation4No" class="filtername">no</label>
+                    <input type="radio" id="gameIsOnPlaystation4No" value="false" th:field="*{playstation4}"></dd>
+                <dt class="col-sm-5"><label for="gameIsOnPlaystation5Yes">On playstation5 ? :</label></dt>
+                <dd class="col-sm-7"><label for="gameIsOnPlaystation5Yes" class="filtername">yes</label>
+                    <input type="radio" id="gameIsOnPlaystation5Yes"value="true" th:field="*{playstation5}">
+                    <label for="gameIsOnPlaystation5No" class="filtername">no</label>
+                    <input type="radio" id="gameIsOnPlaystation5No" value="false" th:field="*{playstation5}"></dd>
+                <dt class="col-sm-5"><label for="gameIsOnPcyes">On pc ? :</label></dt>
+                <dd class="col-sm-7"><label for="gameIsOnPcyes" class="filtername">yes</label>
+                    <input type="radio" id="gameIsOnPcyes"value="true" th:field="*{pc}">
+                    <label for="gameIsOnPcNo" class="filtername">no</label>
+                    <input type="radio" id="gameIsOnPcNo" value="false" th:field="*{pc}"></dd>
+                <dt class="col-sm-5"><label for="gameIsOnXboxyes">On xbox ? :</label></dt>
+                <dd class="col-sm-7"><label for="gameIsOnXboxyes" class="filtername">yes</label>
+                    <input type="radio" id="gameIsOnXboxyes"value="true" th:field="*{xbox}">
+                    <label for="gameIsOnXboxNo" class="filtername">no</label>
+                    <input type="radio" id="gameIsOnXboxNo" value="false" th:field="*{xbox}"></dd>
+            </dl>
         </form>
     </div>
 </main>
