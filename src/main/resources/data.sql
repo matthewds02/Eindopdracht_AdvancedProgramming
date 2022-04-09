@@ -50,6 +50,10 @@ INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
 VALUES (nextval('USER_SEQ'), 'Excavator Simulator', '/img/Excavator Simulator.jpg');
 
+INSERT INTO images(
+    IMAGE_ID, IMAGE_NAME, IMAGE)
+VALUES (nextval('USER_SEQ'), 'newImage', '/img/newImage.jpg');
+
 
 insert into GAME (
     ID, GAME_NAME, GAME_RELEASE_DATE, CRACKED_DATE, EXTRA_INFO,

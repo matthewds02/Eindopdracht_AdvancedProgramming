@@ -70,6 +70,10 @@
                     <input type="radio" id="gameIsOnXboxyes"value="true" th:field="*{xbox}">
                     <label for="gameIsOnXboxNo" class="filtername">no</label>
                     <input type="radio" id="gameIsOnXboxNo" value="false" th:field="*{xbox}"></dd>
+                <dt class="col-sm-5"><label for="image">Image : </label></dt>
+                <dd class="col-sm-7"><select id="image" th:field="*{images}">
+                    <option th:each="i : ${images}" th:value="${i.imageId}" th:text="${i.imageName}"></option>
+                </select></dd>
             </dl>
         </form>
     </div>
