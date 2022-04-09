@@ -1,58 +1,58 @@
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'WDL', '/img/WDL.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'WDL', '/img/WDL.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'Valhalla', '/img/valhalla.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'Valhalla', '/img/valhalla.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'dying daylight 2', '/img/dying daylight.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'dying daylight 2', '/img/dying daylight.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'God of War', '/img/God of War.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'God of War', '/img/God of War.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'Horizon Zero Dawn', '/img/Horizon Zero Dawn.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'Horizon Zero Dawn', '/img/Horizon Zero Dawn.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'World War Z', '/img/World War Z.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'World War Z', '/img/World War Z.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'LEGO® Star Wars™: The Skywalker Saga', '/img/Star Wars.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'LEGO® Star Wars™: The Skywalker Saga', '/img/Star Wars.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'Mortal Kombat 11', '/img/Mortal Kombat 11.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'Mortal Kombat 11', '/img/Mortal Kombat 11.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'Forza Horizon 5', '/img/Forza Horizon 5.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'Forza Horizon 5', '/img/Forza Horizon 5.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'Resident Evil Village', '/img/Resident Evil Village.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'Resident Evil Village', '/img/Resident Evil Village.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'Zombie Army 4: Dead War', '/img/Zombie Army 4.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'Zombie Army 4: Dead War', '/img/Zombie Army 4.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'Tiny Tina''s Wonderlands', '/img/Tiny Tina''s Wonderlands.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'Tiny Tina''s Wonderlands', '/img/Tiny Tina''s Wonderlands.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'Excavator Simulator', '/img/Excavator Simulator.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'Excavator Simulator', '/img/Excavator Simulator.jpg');
 
 INSERT INTO images(
     IMAGE_ID, IMAGE_NAME, IMAGE)
-VALUES (nextval('USER_SEQ'), 'newImage', '/img/newImage.jpg');
+VALUES (nextval('IMAGES_SEQ'), 'newImage', '/img/newImage.jpg');
 
 
 insert into GAME (

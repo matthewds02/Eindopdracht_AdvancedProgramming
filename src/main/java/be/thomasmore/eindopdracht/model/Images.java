@@ -6,8 +6,8 @@ import java.time.LocalDate;
 
 @Entity
 public class Images {
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
-    @SequenceGenerator(name = "user_generator", sequenceName = "user_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "images_generator")
+    @SequenceGenerator(name = "images_generator", sequenceName = "images_seq", allocationSize = 1)
     @Id
     private Integer imageId;
     private String imageName;
