@@ -16,7 +16,8 @@ html {
 body {
     height: 100%;
     background-color: #2a2929;
-    border: 4px solid #07071c7a;
+    /*border: 4px solid #07071c7a;*/
+    border: 1px solid #a10101;
     /*border: 1px solid #a10101;*/
     border-radius: 50px;
     padding-top: 8px;
@@ -26,6 +27,7 @@ body {
 main {
     max-height: 80%;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -169,7 +171,7 @@ img {
     border:none;
 }
 
-.row1content {
+.container-content {
     padding-top: 50px;
     text-align: center;
     color: white;
@@ -192,6 +194,29 @@ h1.gameslist {
 
 .clearFloats {
     clear: both;
+}
+
+.row-details {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.picture {
+    width: 70%;
+}
+
+.row-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.row-details dt {
+    text-align: right;
+}
+
+.question {
+    padding-right: 20px;
 }
 
 /* scrollbar */

@@ -30,7 +30,7 @@
     <div class="Gameslist">
         <div class="eentweede" th:each="game: ${games}">
             <a class="noline" th:href="@{|/gamesdetails/${game.id}}">
-                <div class="container">
+                <div class="container-content">
                     <div th:if="${game.images != null}">
                         <img th:src="@{${game.images.image}}" alt="foto van games">
                     </div>

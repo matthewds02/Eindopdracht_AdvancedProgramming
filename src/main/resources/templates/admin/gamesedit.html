@@ -20,7 +20,7 @@
     </div>
 </header>
 <main>
-    <div class="row1content" th:if="${game}">
+    <div class="container-content" th:if="${game}">
         <form th:action="@{|/admin/gamesedit/${game.id}|}" th:object="${game}" method="post">
             <div class="editButtonDiv">
                 <a class="buttonLook smallButton" th:href="@{'/gamesdetails/' + ${game.id}}">back</a>
@@ -89,7 +89,7 @@
                 <input type="radio" id="gameIsOnXboxNo" value="false" th:field="*{xbox}">
             </div>
         </form>
-    </div>  <div class="row1content" th:unless="${game}">
+    </div>  <div class="container-content" th:unless="${game}">
     <p>no game was chosen</p>
 </div>
 </main>

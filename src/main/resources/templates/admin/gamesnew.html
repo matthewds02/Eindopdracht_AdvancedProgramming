@@ -21,7 +21,7 @@
     </div>
 </header>
 <main class="clearFloats">
-    <div class="row1content" th:object="${game}">
+    <div class="container-content" th:object="${game}">
         <form th:action="@{|/admin/gamesnew/|}" method="post">
             <div class="editButtonDiv">
                 <a class="buttonLook smallButton" th:href="@{'/gameslist/'}">back</a>
