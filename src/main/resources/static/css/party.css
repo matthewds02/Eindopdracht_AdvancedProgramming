@@ -185,9 +185,11 @@ h1.gameslist {
 }
 
 .newButtonDiv {
-    float: right;
-    padding-right: 76px;
-    margin-top: -53px;
+    margin-top: -40px;
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-right: 69px;
 }
 
 .clearFloats {
@@ -383,6 +385,12 @@ li {
     .registerLogin {
         display: flex;
         flex-direction: row;
+    }
+
+    .newButtonDiv {
+        float: right;
+        padding-right: 76px;
+        margin-top: -53px;
     }
 }
 
