@@ -16,3 +16,5 @@ gamesNewPage is where you can create a new game
 addGames is where I add more games in database
 
 looks is for the interface, needs to look cleaner
+
+loginAndRegister, the login/register/logout are working

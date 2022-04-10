@@ -82,10 +82,6 @@ ul {
     padding-left: 0px;
 }
 
-li {
-    display: inline-block;
-}
-
 footer {
     font-size: 10px;
     position: fixed;
@@ -104,7 +100,7 @@ footer {
     display: inline-block;
     margin: 20px 0px;
     vertical-align: top;
-    width: 100%;
+    width: 50%;
 }
 
 .eentweede:hover {
@@ -198,21 +194,27 @@ h1.gameslist {
 
 .row-details {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .picture {
-    width: 70%;
+    width: 100%;
+    padding-bottom: 25px;
 }
 
 .row-text {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    width: 100%;
 }
 
-.row-details dt {
-    text-align: right;
+.row-text-edit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .question {
@@ -225,6 +227,70 @@ h1.gameslist {
 
 .fieldError {
     background: red;
+}
+
+.homeGameslist {
+    width: 60%;
+    margin-left: 100px;
+}
+
+.homeMainGameslist {
+    display: flex;
+    justify-content: center;
+    height: 350px;
+}
+
+.loggedInText {
+    float: right;
+    margin-top: -51px;
+    color: #a51b1b;
+    display: none;
+}
+
+.cancelButtonDiv {
+    float: right;
+    padding-right: 20px;
+}
+
+label {
+    color: white;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    clear: both;
+}
+
+.logoutButtonDiv {
+    width: fit-content;
+    line-height: normal;
+    font-family: none;
+}
+
+.logoutButton {
+    width: 185px;
+    height: 50px;
+}
+
+.centerHome {
+    text-align: center;
+}
+
+.col-sm-5 {
+    width: 100%;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    color: #a10101;
+}
+
+li {
+    list-style: none;
 }
 
 /* scrollbar */
@@ -273,5 +339,34 @@ h1.gameslist {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 30px;
+    }
+
+    .picture {
+        width: 40%;
+    }
+
+    .row-text {
+        width: 50%;
+    }
+
+    .loggedInText {
+        display: block;
+    }
+
+    .row-details dt {
+        text-align: right;
+    }
+
+    li {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .col-sm-5 {
+        flex: 0 0 auto;
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
     }
 }

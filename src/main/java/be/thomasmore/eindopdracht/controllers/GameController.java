@@ -20,7 +20,6 @@ public class GameController {
     public String about(Model model) {
         Iterable<Game> allGames = gameRepository.findAll();
         model.addAttribute("games", allGames);
-        model.addAttribute("nrGames", gameRepository.count());
         return "gameslist";
     }
 
