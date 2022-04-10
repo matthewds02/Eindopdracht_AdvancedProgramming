@@ -287,6 +287,7 @@ label {
     position: absolute;
     left: 0;
     color: #a10101;
+    margin-left: 30px;
 }
 
 li {
