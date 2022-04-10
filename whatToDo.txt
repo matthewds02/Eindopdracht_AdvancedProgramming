@@ -1,2 +1,0 @@
-4: responsive
-5: filter
