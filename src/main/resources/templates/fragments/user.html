@@ -1,6 +1,6 @@
 <html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-<div sec:authorize="isAnonymous()" th:fragment="loginmenu">
+<div sec:authorize="isAnonymous()" th:fragment="loginmenu" class="registerLogin">
     <a href="/user/register">Register</a>
     <a href="/user/login">Login</a>
 </div>
